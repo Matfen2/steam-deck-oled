@@ -1,74 +1,59 @@
 "use client";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { FiMenu } from 'react-icons/fi'; // Bouton Bar
-import { IoClose } from 'react-icons/io5'; // Bouton Close
-import steamDeckOledLogo from '../../public/picts/steamDeckLogo.png';
-
-const Menu = ({ isMobile, onClose }) => {
-  return (
-    <div className={`${isMobile ? 'flex flex-col items-start space-y-4 p-6' : 'flex flex-row space-x-5'}`}>
-      <ul className={`${isMobile ? 'flex flex-col items-start space-y-4' : 'flex flex-row items-center space-x-9 md:space-x-8' }` }>
-        <li className="cursor-pointer text-left text-xl md:text-lg"><a href='#section-technic'>Fiche technique</a></li>
-        <li className="cursor-pointer text-left text-xl md:text-lg">Jeux compatibles</li>
-        <li className="cursor-pointer text-left text-xl md:text-lg">Différentes Versions</li>
-      </ul>
-      <button type="button" className="rounded-md py-2 px-4 transition-all duration-100 hover:scale-110 hover:rounded-full"
-      style={{ border: '1px solid #F4A9AA' }} onClick={onClose}>
-        Passer commande
-      </button>
-    </div>
-  );
-};
+import React from "react";
+import Link from "next/link";
 
 const Header = () => {
-  const [showMenu, setShowMenu] = useState(false);
-
-  const toggleMenu = () => setShowMenu((prev) => !prev);
-  const closeMenu = () => setShowMenu(false);
-
   return (
-    <header className="flex flex-row items-center justify-between px-4 py-4 relative">
-      <Link href="/">
-        <Image src={steamDeckOledLogo} alt="Steam Deck Logo" width={40} height={30} />
-      </Link>
+    <header className="bg-black text-white fixed top-0 left-0 w-full z-50 shadow-md">
+      <div className="container mx-auto px-4 flex items-center justify-between h-16">
+        {/* Logo */}
+        <Link href="/" className="text-2xl font-bold text-red-500">
+          Steam Deck
+        </Link>
 
-      {/* Menu principal pour desktop */}
-      <div className="hidden md:block">
-        <Menu isMobile={false} />
-      </div>
+        {/* Navigation */}
+        <nav className="hidden md:flex space-x-6">
+          <Link href="#section-present" className="hover:text-red-500 transition">
+            Accueil
+          </Link>
+          <Link href="#section-technic" className="hover:text-red-500 transition">
+            Fiche technique
+          </Link>
+          <Link href="#section-compatibilities" className="hover:text-red-500 transition">
+            Jeux compatibles
+          </Link>
+          <Link href="#section-versions" className="hover:text-red-500 transition">
+            Différentes versions
+          </Link>
+          <Link href="#footer" className="hover:text-red-500 transition">
+            Contact
+          </Link>
+        </nav>
 
-      {/* Bouton pour ouvrir le menu mobile */}
-      <button
-        className="block md:hidden text-3xl"
-        onClick={toggleMenu}
-        aria-label={showMenu ? 'Fermer le menu' : 'Ouvrir le menu'}
-      >
-        {showMenu ? <IoClose /> : <FiMenu />}
-      </button>
-
-      {/* Menu mobile */}
-      {showMenu && (
-        <div
-          className="fixed top-0 right-0 w-50 h-62 bg-white z-50"
-          style={{ border: '1px solid #F4A9AA', borderRadius: '0px 0px 0px 40px' }}
-        >
-          <div className="flex flex-row justify-between items-center p-4">
-            {/* Bouton de fermeture */}
-            <button
-              className="text-3xl absolute top-4 right-3"
-              onClick={closeMenu}
-              aria-label="Fermer le menu"
+        {/* Menu hamburger pour mobile */}
+        <div className="md:hidden">
+          <button
+            className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+            aria-label="Open navigation menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              <IoClose />
-            </button>
-          </div>
-          {/* Menu placé en haut à gauche */}
-          <Menu isMobile={true} onClose={closeMenu} />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
         </div>
-      )}
+      </div>
     </header>
   );
 };

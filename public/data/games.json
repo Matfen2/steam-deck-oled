@@ -1,72 +1,72 @@
 [
   {
     "id": 1,
-    "pict": "",
-    "href": ""
+    "pict": "/picts/games/cyberpunk2077.png",
+    "href": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/"
   },
   {
     "id": 2,
-    "pict": "",
-    "href": ""
+    "pict": "/picts/games/bladursGate3.png",
+    "href": "https://store.steampowered.com/app/1086940/Baldurs_Gate_3/"
   },
   {
     "id": 3,
-    "pict": "",
-    "href": ""
+    "pict": "/picts/games/detroitBecomeHuman.png",
+    "href": "https://store.steampowered.com/app/1222140/Detroit_Become_Human/"
   },
   {
     "id": 4,
-    "pict": "",
-    "href": ""
+    "pict": "/picts/games/daysGone.png",
+    "href": "https://store.steampowered.com/app/1259420/Days_Gone/"
   },
   {
     "id": 5,
-    "pict": "",
-    "href": ""
+    "pict": "/picts/games/sekiro.png",
+    "href": "https://store.steampowered.com/app/814380/Sekiro_Shadows_Die_Twice__GOTY_Edition/"
   },
   {
     "id": 6,
-    "pict": "",
-    "href": ""
+    "pict": "/picts/games/dyingLight.png",
+    "href": "https://store.steampowered.com/app/239140/Dying_Light/"
   },
   {
     "id": 7,
-    "pict": "",
-    "href": ""
+    "pict": "/picts/games/balatro.png",
+    "href": "https://store.steampowered.com/app/2379780/Balatro/"
   },
   {
     "id": 8,
-    "pict": "",
-    "href": ""
+    "pict": "/picts/games/celeste.png",
+    "href": "https://store.steampowered.com/app/504230/Celeste/"
   },
   {
     "id": 9,
-    "pict": "",
-    "href": ""
+    "pict": "/picts/games/cuphead.png",
+    "href": "https://store.steampowered.com/app/268910/Cuphead/"
   },
   {
     "id": 10,
-    "pict": "",
-    "href": ""
+    "pict": "/picts/games/daveTheDiver.png",
+    "href": "https://store.steampowered.com/app/1868140/DAVE_THE_DIVER/"
   },
   {
     "id": 11,
-    "pict": "",
-    "href": ""
+    "pict": "/picts/games/itTakesTwo.png",
+    "href": "https://store.steampowered.com/app/1426210/It_Takes_Two/"
   },
   {
     "id": 12,
-    "pict": "",
-    "href": ""
+    "pict": "/picts/games/outerWilds.png",
+    "href": "https://store.steampowered.com/app/753640/Outer_Wilds/"
   },
   {
     "id": 13,
-    "pict": "",
-    "href": ""
+    "pict": "/picts/games/subnautica.png",
+    "href": "https://store.steampowered.com/app/264710/Subnautica/"
   },
   {
     "id": 14,
-    "pict": "",
-    "href": ""
+    "pict": "/picts/games/noMansSky.png",
+    "href": "https://store.steampowered.com/app/275850/No_Mans_Sky/"
   }
 ]
