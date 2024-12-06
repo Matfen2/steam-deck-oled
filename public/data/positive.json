@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "pict": "/picts/oledWeigth.png",
+    "points": "Jouez léger, sans surchauffer",
+    "describe": "Grâce à un ventilateur plus grand et à des composants thermiques améliorés, Steam Deck OLED chauffe moins. En plus, il est 30 grammes (soit environ 5 %) plus léger que le modèle LCD grâce à son écran OLED."
+  },
+  {
+    "id": 2,
+    "pict": "/picts/oledBattery.png",
+    "points": "Jouez plus longtemps",
+    "describe": "L'autonomie de Steam Deck OLED est 30 à 50 % supérieure à celle du modèle LCD, ce grâce à une plus grande batterie et à l'écran OLED, qui est moins énergivore. Ajoutez à cela un nouvel APU d'AMD plus efficace, et vous obtenez encore plus de temps pour jouer à vos jeux favoris."
+  },
+  {
+    "id": 3,
+    "pict": "/picts/oledDownload.png",
+    "points": "Téléchargements plus rapides",
+    "describe": "Steam Deck OLED est doté du wifi 6E, qui offre une meilleure bande passante et une latence plus faible. Cela se traduit par des téléchargements plus rapides (jusqu'à 3 fois plus !) et une connexion des plus stables lors des parties en ligne."
+  }
+]
