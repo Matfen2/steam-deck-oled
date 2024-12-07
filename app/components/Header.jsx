@@ -1,58 +1,118 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { FiMenu } from "react-icons/fi"; // Bouton Bar
+import { IoClose } from "react-icons/io5"; // Bouton Close
+import SteamDeckOledLogo from "../../public/picts/steamDeckLogo.png";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <header className="bg-black text-white fixed top-0 left-0 w-full z-50 shadow-md">
-      <div className="container mx-auto px-4 flex items-center justify-between h-16">
+    <header className="bg-white text-black fixed top-0 left-0 w-full z-50 shadow-md">
+      <div className="px-4 flex items-center justify-between h-16">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold text-red-500">
-          Steam Deck
+        <Link href="/" className="flex items-center">
+          <Image src={SteamDeckOledLogo} alt="Steam Deck Logo" width={30} height={30} />
         </Link>
 
-        {/* Navigation */}
-        <nav className="hidden md:flex space-x-6">
-          <Link href="#section-present" className="hover:text-red-500 transition">
-            Accueil
-          </Link>
-          <Link href="#section-technic" className="hover:text-red-500 transition">
+        {/* Navigation pour bureau */}
+        <nav className="hidden md:flex space-x-4 items-center">
+          <Link
+            href="#section-technic"
+            className="hover:text-red-500 transition text-sm"
+            style={{ fontFamily: "Qaranta" }}
+          >
             Fiche technique
           </Link>
-          <Link href="#section-compatibilities" className="hover:text-red-500 transition">
+          <Link
+            href="#section-compatibilities"
+            className="hover:text-red-500 transition text-sm"
+            style={{ fontFamily: "Qaranta" }}
+          >
             Jeux compatibles
           </Link>
-          <Link href="#section-versions" className="hover:text-red-500 transition">
+          <Link
+            href="#section-versions"
+            className="hover:text-red-500 transition text-sm"
+            style={{ fontFamily: "Qaranta" }}
+          >
             Différentes versions
           </Link>
-          <Link href="#footer" className="hover:text-red-500 transition">
-            Contact
-          </Link>
+          <button
+            type="button"
+            className="rounded-md text-sm py-2 px-4 transition-all duration-150 hover:scale-110 hover:rounded-full border border-red-500 text-red-500"
+            style={{ fontFamily: "Qaranta" }}
+          >
+            Passer commande
+          </button>
         </nav>
 
-        {/* Menu hamburger pour mobile */}
-        <div className="md:hidden">
-          <button
-            className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-            aria-label="Open navigation menu"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-white"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+        {/* Bouton hamburger pour mobile */}
+        <button
+          onClick={toggleMenu}
+          className="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+          aria-label="Open navigation menu"
+        >
+          {isMenuOpen ? (
+            <IoClose className="h-6 w-6 text-black" />
+          ) : (
+            <FiMenu className="h-6 w-6 text-black" />
+          )}
+        </button>
+      </div>
+
+      {/* Menu déroulant pour mobile */}
+      <div
+        className={`${
+          isMenuOpen ? "max-h-screen" : "max-h-0"
+        } md:hidden bg-white overflow-hidden transition-all duration-300 absolute top-16 right-0 w-full shadow-md`}
+        style={{ borderRadius: "0px 0px 10px 10px" }}
+      >
+        <ul className="flex flex-col space-y-4 p-4">
+          <li>
+            <Link
+              href="#section-technic"
+              className="block text-center text-gray-700 hover:text-red-500 transition" style={{ fontFamily: "Qaranta" }}
+              onClick={toggleMenu}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-        </div>
+              Fiche technique
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="#section-compatibilities"
+              className="block text-center text-gray-700 hover:text-red-500 transition" style={{ fontFamily: "Qaranta" }}
+              onClick={toggleMenu}
+            >
+              Jeux compatibles
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="#section-versions"
+              className="block text-center text-gray-700 hover:text-red-500 transition" style={{ fontFamily: "Qaranta" }}
+              onClick={toggleMenu}
+            >
+              Différentes versions
+            </Link>
+          </li>
+          <li>
+            <button
+              type="button"
+              className="w-62 mx-auto block text-center rounded-md py-2 px-3 transition-all duration-100 hover:scale-110 hover:rounded-full text-red-500 border border-red-500" style={{ fontFamily: "Qaranta" }}
+              onClick={toggleMenu}
+            >
+              Passer commande
+            </button>
+          </li>
+        </ul>
       </div>
     </header>
   );

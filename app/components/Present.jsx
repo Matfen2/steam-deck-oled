@@ -15,7 +15,7 @@ const Present = () => {
 
       {/* Texte principal */}
       <div className="absolute top-14 left-1/2 -translate-x-1/2 translate-y-1/2 z-10 px-4">
-        <p className="text-white text-2xl sm:text-3xl md:text-5xl font-bold drop-shadow-lg leading-relaxed">
+        <p className="text-white text-3xl sm:text-3xl md:text-5xl font-bold drop-shadow-lg leading-relaxed" style={{ fontFamily: "quickynick", letterSpacing: "2px" }}>
           Vos jeux, partout <br /> avec vous
         </p>
       </div>

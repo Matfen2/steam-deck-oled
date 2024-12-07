@@ -11,6 +11,16 @@ body {
   src: url('../public/fonts/Qaranta Bold.otf') format("opentype");
 }
 
+@font-face {
+  font-family: "quickynick";
+  src: url('../public/fonts/quickynick.ttf') format("opentype");
+}
+
+@font-face {
+  font-family: "quickynickstraight";
+  src: url('../public/fonts/quickynickstraight.ttf') format("opentype");
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

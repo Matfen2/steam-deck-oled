@@ -14,7 +14,7 @@ const Compatibilities = () => {
   const GameCard = ({ img, href }) => {
     return (
       <a href={href} target="_blank" rel="noopener noreferrer"
-      className="relative w-32 h-32 sm:w-44 sm:h-44 md:w-82 md:h-56 lg:w-96 lg:h-64 rounded-md shadow-md transition-transform hover:scale-105">
+      className="relative w-32 h-32 sm:w-56 sm:h-44 md:w-82 md:h-56 lg:w-96 lg:h-64 rounded-md shadow-md transition-transform hover:scale-105">
         <div className="w-full h-full relative">
           <Image src={img} alt="Game thumbnail" layout="fill" objectFit="cover" className="rounded-md" />
         </div>
@@ -31,10 +31,10 @@ const Compatibilities = () => {
       {/* Contenu principal */}
       <div className="relative z-10  mx-auto">
         {/* Titre principal */}
-        <h2 className="text-3xl md:text-4xl sm:text-2xl font-bold text-center mb-4">
+        <h2 className="text-3xl md:text-4xl sm:text-2xl font-bold text-center mb-2" style={{ fontFamily: "quickynick", letterSpacing: "2px" }}>
           Transformez votre expérience de jeu avec Steam Deck
         </h2>
-        <p className="text-center text-base sm:text-sm max-w-4xl mx-auto mb-6">
+        <p className="text-center text-base sm:text-md max-w-4xl mx-auto mb-6" style={{ fontFamily: "Qaranta" }}>
           Découvrez une bibliothèque de jeux adaptée à votre console portable,
           pour jouer partout avec une qualité inégalée.
         </p>
@@ -64,8 +64,8 @@ const Compatibilities = () => {
 
         {/* Bouton pour explorer les jeux compatibles */}
         <div className="mt-8 flex justify-center md:justify-end">
-          <button className="px-4 py-2 bg-red-500 text-white font-bold rounded-lg transition-all duration-150 hover:scale-110 hover:rounded-full hover:bg-red-600">
-            Voir les jeux compatibles
+          <button className="px-3 py-2 bg-red-500 text-white font-bold rounded-lg transition-all duration-150 hover:scale-110 hover:rounded-full hover:bg-red-600" style={{ fontFamily: "Qaranta" }}>
+            <a href="https://store.steampowered.com/greatondeck/">Voir les jeux compatibles</a>
           </button>
         </div>
       </div>
