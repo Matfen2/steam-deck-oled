@@ -3,15 +3,15 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FiMenu } from "react-icons/fi"; // Bouton Bar
-import { IoClose } from "react-icons/io5"; // Bouton Close
+import { FiMenu } from "react-icons/fi"; 
+import { IoClose } from "react-icons/io5"; 
 import SteamDeckOledLogo from "../../public/picts/steamDeckLogo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const toggleMenu = (value) => {
+    setIsMenuOpen(value);
   };
 
   return (

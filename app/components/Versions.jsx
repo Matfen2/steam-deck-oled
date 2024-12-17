@@ -8,8 +8,8 @@ import Image from "next/image";
 const Versions = () => {
   const [selectedVersion, setSelectedVersion] = useState(versions[0].id);
 
-  const handleSelectVersion = (versionId) => {
-    setSelectedVersion(versionId);
+  const handleSelectVersion = (value) => {
+    setSelectedVersion(value);
   };
 
   const renderVersionDetails = (version) => (
@@ -92,7 +92,7 @@ const Versions = () => {
 
       {/* Affichage des détails */}
       {selectedVersion &&
-        renderVersionDetails(versions.find((v) => v.id === selectedVersion))}
+        renderVersionDetails(versions.find((version) => version.id === selectedVersion))}
     </div>
   );
 };
