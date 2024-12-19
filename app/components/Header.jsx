@@ -10,8 +10,8 @@ import SteamDeckOledLogo from "../../public/picts/steamDeckLogo.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = (value) => {
-    setIsMenuOpen(value);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
